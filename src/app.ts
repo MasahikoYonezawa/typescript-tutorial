@@ -18,17 +18,17 @@ console.log(`The product ${product.name} costs $${product.price}`);
 
 let counter: number = 1;
 let names: string[] = ['John', 'Jane', 'Peter', 'David', 'Mary'];
-let person: {
+let oldPerson: {
     name: string;
     age: number
 };
 
-person = {
+oldPerson = {
     name: 'John',
     age: 25
 }; // valid
 
-console.log(counter, names, person);
+console.log(counter, names, oldPerson);
 
 let greeting : (name: string) => string;
 greeting = function (name: string) {

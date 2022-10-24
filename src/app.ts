@@ -83,3 +83,68 @@ const json = `{"latitude": 10.11, "longitude":12.12}`;
 // parse JSON to find location
 const currentLocation = JSON.parse(json);
 console.log(currentLocation);
+
+let i = 0;
+for (; ;) {
+    console.log(i);
+    i++;
+    if (i > 9) break;
+}
+
+console.log("------------");
+counter = 0;
+
+while (counter < 5) {
+    console.log(counter);
+    counter++;
+}
+
+console.log("------------");
+i = 0;
+
+do {
+    console.log(i);
+    i++
+} while (i < 10);
+
+
+console.log("------------");
+function multiply(a: number, b: number, c?: number): number {
+
+    if (typeof c !== 'undefined') {
+        return a * b * c;
+    }
+    return a * b;
+}
+console.log(multiply(5, 2, 3));
+console.log(multiply(5, 2));
+
+console.log("------------");
+function applyDiscount(price: number, discount: number = 0.05): number {
+    return price * (1 - discount);
+}
+
+console.log(applyDiscount(100));
+console.log(applyDiscount(100, 0.1));
+
+console.log("------------");
+function getTotal(...numbers: number[]): number {
+    let total = 0;
+    numbers.forEach((num) => total += num);
+    return total;
+}
+console.log(getTotal()); // 0
+console.log(getTotal(10, 20)); // 30
+console.log(getTotal(10, 20, 30)); // 60
+
+console.log("------------");
+
+function add(a: number, b: number): number;
+function add(a: string, b: string): string;
+function add(a: any, b: any): any {
+    return a + b;
+}
+
+console.log(add(10, 20));
+console.log(add("10", "20"));
+console.log("------------");
